@@ -223,12 +223,12 @@ exec --no-startup-id /usr/bin/gnome-keyring-daemon --start --components=ssh,secr
 #bindsym XF86MonBrightnessUp exec xbacklight -inc 20 # increase screen brightness
 #bindsym XF86MonBrightnessDown exec xbacklight -dec 20 # decrease screen brightness
 set $workspace1 "1: Browser"
-set $workspace2 "2: Term"
-set $workspace3 "3: Todo"
+set $workspace2 "2: Terminal"
+set $workspace3 "3: Note"
 set $workspace4 "4: Music"
 
 assign [class="Brave-browser"] $workspace1
 assign [class="Alacritty"] $workspace2
 assign [class="obsidian"] $workspace3
-assign [class="Rhythmbox"] $workspace4
+for_window [class="Spotify"] move to workspace $workspace4
 
