@@ -13,9 +13,7 @@ return require('packer').startup(function(use)
         require('gitsigns').setup()
       end
     }
-    use "lewis6991/gitsigns.nvim"
 	-- colorscheme
-	use "EdenEast/nightfox.nvim"
     use 'folke/tokyonight.nvim'
 	use {
 		'nvim-telescope/telescope.nvim', tag = '0.1.1',

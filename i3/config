@@ -100,7 +100,10 @@ bindsym $mod+w layout tabbed
 bindsym $mod+e layout toggle split
 
 # toggle tiling / floating
-bindsym $mod+Shift+space floating toggle
+# bindsym $mod+Shift+space floating toggle
+bindsym $mod+Shift+space floating toggle; [tiling con_id=__focused__] border none; [floating con_id=__focused__] border normal
+default_border none
+default_floating_border normal
 
 # change focus between tiling / floating windows
 bindsym $mod+space focus mode_toggle
@@ -204,7 +207,7 @@ bar {
         # hidden_state hide
         # modifier $sup
 
-        status_command i3status --config ~/.i3status.conf
+        status_command i3status --config ~/.config/i3/.i3status.conf
         position bottom 
         colors {
             background $bg-color
@@ -221,7 +224,7 @@ bar {
 bindsym $mod+Shift+x exec i3lock --color "$bg-color"
 bindsym $sup+Tab workspace back_and_forth
 
-exec_always feh --bg-scale /home/floki/Pictures/Wallpaper/wallpaper-91.jpg
+exec_always feh --bg-scale /home/floki/Pictures/Wallpapers/wallpaper-91.jpg
 exec --no-startup-id /usr/bin/gnome-keyring-daemon --start --components=ssh,secrets,pkcs11
 # Pulse Audio controls
 #bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
@@ -236,8 +239,6 @@ set $workspace2 "2"
 set $workspace3 "3"
 set $workspace4 "4"
 
-assign [class="Brave-browser"] $workspace1
-assign [class="firefox"] $workspace1
 assign [class="Alacritty"] $workspace2
 assign [class="obsidian"] $workspace3
 for_window [class="Spotify"] move to workspace $workspace4
