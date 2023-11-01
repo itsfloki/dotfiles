@@ -20,9 +20,8 @@ scrolling:
 font:
   normal:
     # family: CaskaydiaCove Nerd Font
+    # family: FantasqueSansM Nerd Font
     family: FiraCode Nerd Font
-    # family: UbuntuMono Nerd Font
-    # family: Hack Nerd Font
     # family: Monospace
     style: Regular
 
@@ -41,7 +40,7 @@ font:
     family: FiraCode Nerd Font
     style: Bold Italic
 
-  size: 8
+  size: 9.2
 
   offset:
     x: 0
@@ -49,36 +48,30 @@ font:
 
 # TokyoNight Alacritty Colors
 colors:
-  name: TokyoNight Night
-  author: Folke
-  # Default colors
+  name: vscode (dark)
+  author: senpai-10
   primary:
-    background: '0x1a1b26'
-    foreground: '0xc0caf5'
-
-  # Normal colors
+    background: "#1E1E1E"
+    foreground: "#D4D4D4"
+  cursor:
+    text: "#1d1f21"
+    cursor: "#cccccc"
   normal:
-    black: '0x15161E'
-    red: '0xf7768e'
-    green: '0x9ece6a'
-    yellow: '0xe0af68'
-    blue: '0x7aa2f7'
-    magenta: '0xbb9af7'
-    cyan: '0x7dcfff'
-    white: '0xa9b1d6'
-
-  # Bright colors
+    black: "#000000"
+    red: "#cd3131"
+    green: "#0dbc79"
+    yellow: "#e5e510"
+    blue: "#2472c8"
+    magenta: "#bc3fbc"
+    cyan: "#11a8cd"
+    white: "#e5e5e5"
   bright:
-    black: '0x414868'
-    red: '0xf7768e'
-    green: '0x9ece6a'
-    yellow: '0xe0af68'
-    blue: '0x7aa2f7'
-    magenta: '0xbb9af7'
-    cyan: '0x7dcfff'
-    white: '0xc0caf5'
-
-  indexed_colors:
-    - { index: 16, color: '0xff9e64' }
-    - { index: 17, color: '0xdb4b4b' }
-theme: Tokyonight_Night
+    black: "#666666"
+    red: "#f14c4c"
+    green: "#23d18b"
+    yellow: "#f5f543"
+    blue: "#3b8eea"
+    magenta: "#d670d6"
+    cyan: "#29b8db"
+    white: "#e5e5e5"
+theme: vscode.dark

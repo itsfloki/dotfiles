@@ -1,5 +1,3 @@
-set -u fish_greeting ""
-
 set -gx TERM xterm-256color
 
 if status is-interactive
@@ -11,7 +9,16 @@ alias vim="nvim"
 alias ti="timer -t 00:10:00 -v 0.1"
 alias cb="cargo build"
 alias cr="cargo run"
+alias cdoc="cargo doc --open"
+alias rdoc="rustup docs"
 alias ls="exa"
+alias tmux='tmux -u'
+alias t='tmux -u'
+alias ga='git add'
+alias gc='git commit -m'
+alias gr='git remote'
+alias gp='git push'
+alias nf='neofetch --ascii_distro debian'
 
 # TokyoNight Color Palette
 set -l foreground c0caf5
@@ -47,13 +54,16 @@ set -g fish_pager_color_prefix $cyan
 set -g fish_pager_color_completion $foreground
 set -g fish_pager_color_description $comment
 set -g fish_pager_color_selected_background --background=$selection
+set -g fish_greeting
+set --universal nvm_default_version v18.16.1
+set PATH $PATH ~/.cargo/bin
 
+set -Ux ANDROID_HOME $HOME/Android/Sdk
+# Add the Android emulator directory to the PATH
+set -x PATH $PATH $ANDROID_HOME/emulator
+
+# Add the Android platform-tools directory to the PATH
+set -x PATH $PATH $ANDROID_HOME/platform-tools
 
 
 starship init fish | source
-
-fish_add_path /home/floki/.aiken/bin
-
-# export DENO_INSTALL="/home/floki/.deno"
-# export PATH="$DENO_INSTALL/bin:$PATH"
-export PATH="$PATH:/usr/local/go/bin"

@@ -24,6 +24,8 @@ font pango:CaskaydiaCove Nerd Font 9
 # https://wiki.archlinux.org/index.php/XDG_Autostart
 exec --no-startup-id dex --autostart --environment i3
 
+# exec_always xmodmap ~/.xmodmap
+
 # The combination of xss-lock, nm-applet and pactl is a popular choice, so
 # they are included here as an example. Modify as you see fit.
 
@@ -193,10 +195,19 @@ set $urgent-bg-color     #E53935
 
 # window colors
 #                       border              background         text                 indicator
-client.focused          $bg-color           $bg-color          $text-color          #2d3436 
-client.unfocused        $inactive-bg-color $inactive-bg-color $inactive-text-color  #2d3436 
-client.focused_inactive $inactive-bg-color $inactive-bg-color $inactive-text-color  #2d3436 
-client.urgent           $urgent-bg-color    $urgent-bg-color   $text-color          #2d3436 
+# client.focused          $bg-color           $bg-color          $text-color          #2d3436 
+# client.unfocused        $inactive-bg-color $inactive-bg-color $inactive-text-color  #2d3436 
+# client.focused_inactive $inactive-bg-color $inactive-bg-color $inactive-text-color  #2d3436 
+# client.urgent           $urgent-bg-color    $urgent-bg-color   $text-color          #2d3436 
+
+# class                 border  backgr. text    indicator child_border
+client.focused          #4c7899 #285577 #ffffff #285577   #285577
+client.focused_inactive #333333 #5f676a #ffffff #484e50   #5f676a
+client.unfocused        #333333 #222222 #888888 #292d2e   #222222
+client.urgent           #2f343a #900000 #ffffff #900000   #900000
+client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
+
+client.background       #ffffff
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
@@ -209,13 +220,14 @@ bar {
 
         status_command i3status --config ~/.config/i3/.i3status.conf
         position bottom 
+        font pango:CaskaydiaCove Nerd Font 8
         colors {
             background $bg-color
-                separator #757575
-            #                  border             background         text
-            focused_workspace  $bg-color          $bg-color          $text-color
-            inactive_workspace $inactive-bg-color $inactive-bg-color $inactive-text-color
-            urgent_workspace   $urgent-bg-color   $urgent-bg-color   $text-color
+     #           separator #757575
+     #       #                  border             background         text
+     #       focused_workspace  $bg-color          $bg-color          $text-color
+     #       inactive_workspace $inactive-bg-color $inactive-bg-color $inactive-text-color
+     #       urgent_workspace   $urgent-bg-color   $urgent-bg-color   $text-color
 	    }
 }
 
@@ -245,11 +257,11 @@ for_window [class="Spotify"] move to workspace $workspace4
 
 
 # Configure 5px of space between windows and to the screen edges.
-gaps inner 5px
+# gaps inner 0px
 
 # Configure an additional 5px of extra space to the screen edges,
 # for a total gap of 10px to the screen edges, and 5px between windows.
-gaps outer 5px
+# gaps outer 5px
 
 # Overwrite gaps to 0, I need all the space I can get on workspace 3.
 # workspace 3 gaps inner 0
@@ -258,7 +270,11 @@ gaps outer 5px
 # Only enable outer gaps when there is exactly one window or split container on the workspace.
 # smart_gaps inverse_outer
 
-default_border pixel 4
+default_border pixel 2
 
 # Screenshots
 bindsym Shift+Print exec --no-startup-id maim --format=png --select "/home/$USER/Pictures/screenshot-$(date -u +'%Y%m%d-%H%M%SZ')-selected.png"
+
+
+# change dpi
+exec xrandr --dpi 115

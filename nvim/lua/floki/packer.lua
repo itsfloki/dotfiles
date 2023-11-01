@@ -7,12 +7,12 @@ return require('packer').startup(function(use)
 	-- Packer can manage itself
 	use 'wbthomason/packer.nvim'
     -- git 
-    use {
-      'lewis6991/gitsigns.nvim',
-      config = function()
-        require('gitsigns').setup()
-      end
-    }
+  --  use {
+  --    'lewis6991/gitsigns.nvim',
+  --    config = function()
+  --      require('gitsigns').setup()
+  --    end
+  --  }
 	-- colorscheme
     use 'folke/tokyonight.nvim'
 	use {
@@ -21,17 +21,23 @@ return require('packer').startup(function(use)
 		requires = { {'nvim-lua/plenary.nvim'} }
 	}
 
-    use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
+    -- use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
+    use {
+        'nvim-treesitter/nvim-treesitter',
+        run = function()
+            local ts_update = require('nvim-treesitter.install').update({ with_sync = true })
+            ts_update()
+        end,
+    }
 
     -- status line
-    use {
-        'nvim-lualine/lualine.nvim',
-        requires = { 'kyazdani42/nvim-web-devicons', opt = true }
-    }
+--    use {
+--        'nvim-lualine/lualine.nvim',
+--        requires = { 'kyazdani42/nvim-web-devicons', opt = true }
+--    }
 
 	-- LSP Plugins
     -- aiken
-    use 'aiken-lang/editor-integration-nvim'
 	use {
 		'VonHeikemen/lsp-zero.nvim',
 		branch = 'v1.x',

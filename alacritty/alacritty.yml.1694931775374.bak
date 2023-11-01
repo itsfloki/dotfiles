@@ -20,28 +20,28 @@ scrolling:
 font:
   normal:
     # family: CaskaydiaCove Nerd Font
-    family: FiraCode Nerd Font
-    # family: UbuntuMono Nerd Font
-    # family: Hack Nerd Font
+    # family: FantasqueSansM Nerd Font
+    # family: FiraCode Nerd Font
+    family: Hack Nerd Font
     # family: Monospace
     style: Regular
 
   bold:
     #family: Agave Nerd Font
-    family: FiraCode Nerd Font
+    family: Hack Nerd Font
     style: Bold
 
   italic:
     #family: Agave Nerd Font
-    family: FiraCode Nerd Font
+    family: Hack Nerd Font
     style: Italic
 
   bold_italic:
     #family: Agave Nerd Font
-    family: FiraCode Nerd Font
+    family: Hack Nerd Font
     style: Bold Italic
 
-  size: 8
+  size: 8.5
 
   offset:
     x: 0
