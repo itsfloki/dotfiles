@@ -1,0 +1,17 @@
+{
+    "workbench.startupEditor": "none",
+    "vim.insertModeKeyBindings": [
+        {
+          "before": ["k", "j"],
+          "after": ["<Esc>"]
+        }
+      ],
+      "editor.minimap.renderCharacters": false,
+      "editor.minimap.autohide": true,
+      "editor.fontFamily": "'CaskaydiaCove Nerd Font', 'Droid Sans Mono', 'monospace', monospace",
+      "editor.fontSize": 15,
+      "editor.cursorSmoothCaretAnimation": "on",
+      "workbench.colorTheme": "Default Dark+",
+      "workbench.iconTheme": "vs-minimal",
+      "terminal.integrated.sendKeybindingsToShell": true,
+}
