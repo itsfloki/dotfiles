@@ -37,6 +37,10 @@ set clipboard=unnamedplus
 " Set indentation
 set smartindent
 
+" Set rular
+set colorcolumn=80
+highlight ColorColumn ctermbg=0 guibg=lightgrey
+
 " Set space+p+v to open netrw
 let mapleader = " "
 nnoremap <leader>pv :Ex<CR>
