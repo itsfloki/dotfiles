@@ -1,17 +1,42 @@
 {
+    "editor.stickyScroll.enabled": false,
+    "breadcrumbs.enabled": false,
     "workbench.startupEditor": "none",
+    "vim.useCtrlKeys": true,
+    "vim.useSystemClipboard": true,
     "vim.insertModeKeyBindings": [
         {
-          "before": ["k", "j"],
-          "after": ["<Esc>"]
+            "before": [
+                "k",
+                "j"
+            ],
+            "after": [
+                "<Esc>"
+            ]
         }
-      ],
-      "editor.minimap.renderCharacters": false,
-      "editor.minimap.autohide": true,
-      "editor.fontFamily": "'CaskaydiaCove Nerd Font', 'Droid Sans Mono', 'monospace', monospace",
-      "editor.fontSize": 15,
-      "editor.cursorSmoothCaretAnimation": "on",
-      "workbench.colorTheme": "Default Dark+",
-      "workbench.iconTheme": "vs-minimal",
-      "terminal.integrated.sendKeybindingsToShell": true,
+    ],
+    "vim.normalModeKeyBindingsNonRecursive": [
+        {
+            "before": ["u"],
+            "commands": ["undo"]
+        },
+        {
+            "before": ["r"],
+            "commands": ["redo"]
+        }
+    ],
+    "editor.minimap.renderCharacters": false,
+    "editor.minimap.autohide": true,
+    "editor.fontFamily": "'Ubuntu Mono', 'Droid Sans Mono', 'monospace', monospace",
+    "editor.fontSize": 16,
+    "workbench.colorTheme": "Default Dark+",
+    "workbench.iconTheme": "vs-minimal",
+    "terminal.integrated.sendKeybindingsToShell": true,
+    "editor.cursorSmoothCaretAnimation": "off",
+    "editor.rulers": [
+        80
+    ],
+    "editor.tabSize": 4,
+    "editor.insertSpaces": true,
+    "editor.detectIndentation": false
 }
