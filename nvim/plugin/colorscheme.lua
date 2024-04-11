@@ -1,3 +1,2 @@
--- vim.cmd[[colorscheme tokyonight-night]]
-vim.cmd[[colorscheme sonokai]]
-
+vim.cmd[[colorscheme tokyonight-night]]
+-- vim.cmd[[colorscheme sonokai]]
